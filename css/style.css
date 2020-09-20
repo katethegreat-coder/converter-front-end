@@ -1,0 +1,29 @@
+html {
+    scroll-behavior: smooth;
+}
+
+.navbar {
+    height: 10vh;
+}
+
+main {
+    padding-top: 15vh;
+}
+
+.fa-ruler-vertical {
+    font-size: 1.5rem;
+    transform: rotate(20deg);
+}
+
+.fa-angle-double-up {
+    font-size: 2rem;
+}
+
+footer a {
+    color: #39b1d6  !important;
+}
+
+footer a:hover {
+    color: white !important;
+}
+

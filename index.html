@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Useful converter for front-end created in HTML, CSS, Bootstrap, Javascript par Aurélie Rodrigues Dutrey | Coding & Co">
+    <meta name="author" content="Aurélie Rodrigues Dutrey">
+    <meta name="robots" content="index, follow">
+    <link rel="shortcut icon" href="favicon/favicon.ico" />
+
+    <!-- Style Sheets-->
+    <link href="css/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>Document</title>
+</head>
+<body class="bg-info">
+
+    <header class="mb-5" id="top">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+            <a class="navbar-brand text-uppercase" href="#top"><i class="fas fa-ruler-vertical mx-5"></i> Converter for Front-end</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link" href="#vw">Vw to Px <i class="fas fa-exchange-alt"></i></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#vh">Vh to Px <i class="fas fa-exchange-alt"></i></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#pt">Pt to Px <i class="fas fa-exchange-alt"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#rem">Rem to Px <i class="fas fa-exchange-alt"></i></a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+    </header>
+
+    <main class="container">
+        <div class="row vw justify-content-center my-5" id="vw">
+            <div class="jumbotron col-xl-5 text-center mr-5">
+                <h1 class="display-4 mb-5">Convert vw to px</h1>
+                <form class="form-inline justify-content-center">
+                    <div class="form-group mx-sm-3 mb-2">
+                      <input type="number" class="form-control" placeholder="vw" onchange="vwTOpx(this.value);">
+                    </div>
+                </form>                
+                <hr class="my-5">
+                <button type="button" class="btn btn-info">
+                    <span id="result_vw_px"></span> <span class="badge badge-light">PX</span>
+                </button>
+            </div>
+            <div class="jumbotron col-xl-5 text-center mr-5">
+                <h1 class="display-4 mb-5">Convert px to vw</h1>
+                <form class="form-inline justify-content-center">
+                    <div class="form-group mx-sm-3 mb-2">
+                      <input type="number" class="form-control" placeholder="px" onchange="pxTOvw(this.value);">
+                    </div>
+                </form>                
+                <hr class="my-5">
+                <button type="button" class="btn btn-info">
+                    <span id="result_px_vw"></span> <span class="badge badge-light">VW</span>
+                </button>
+            </div>
+        </div>
+        <div class="row vh justify-content-center my-5" id="vh">
+            <div class="jumbotron col-xl-5 text-center mr-5">
+                <h1 class="display-4 mb-5">Convert vh to px</h1>
+                <form class="form-inline justify-content-center">
+                    <div class="form-group mx-sm-3 mb-2">
+                      <input type="number" class="form-control" placeholder="vh" onchange="vhTOpx(this.value);">
+                    </div>
+                </form>                
+                <hr class="my-5">
+                <button type="button" class="btn btn-info">
+                    <span id="result_vh_px"></span> <span class="badge badge-light">PX</span>
+                </button>
+            </div>
+            <div class="jumbotron col-xl-5 text-center mr-5">
+                <h1 class="display-4 mb-5">Convert px to vh</h1>
+                <form class="form-inline justify-content-center">
+                    <div class="form-group mx-sm-3 mb-2">
+                      <input type="number" class="form-control" placeholder="px" onchange="pxTOvh(this.value);">
+                    </div>
+                </form>                
+                <hr class="my-5">
+                <button type="button" class="btn btn-info">
+                    <span id="result_px_vh"></span> <span class="badge badge-light">VH</span>
+                </button>
+            </div>
+        </div>
+        <div class="row pt justify-content-center my-5" id="pt">
+            <div class="jumbotron col-xl-5 text-center mr-5">
+                <h1 class="display-4 mb-5">Convert pt to px</h1>
+                <form class="form-inline justify-content-center">
+                    <div class="form-group mx-sm-3 mb-2">
+                      <input type="number" class="form-control" placeholder=pt onchange="ptTOpx(this.value);">
+                    </div>
+                </form>                
+                <hr class="my-5">
+                <button type="button" class="btn btn-info">
+                    <span id="result_pt_px"></span> <span class="badge badge-light">PX</span>
+                </button>
+            </div>
+            <div class="jumbotron col-xl-5 text-center mr-5">
+                <h1 class="display-4 mb-5">Convert px to pt</h1>
+                <form class="form-inline justify-content-center">
+                    <div class="form-group mx-sm-3 mb-2">
+                      <input type="number" class="form-control" placeholder="px" onchange="pxTOpt(this.value);">
+                    </div>
+                </form>                
+                <hr class="my-5">
+                <button type="button" class="btn btn-info">
+                    <span id="result_px_pt"></span> <span class="badge badge-light">PT</span>
+                </button>
+            </div>
+        </div>
+        <div class="row rem justify-content-center my-5" id="rem">
+            <div class="jumbotron col-xl-5 text-center mr-5">
+                <h1 class="display-4 mb-5">Convert px to rem</h1>
+                <form class="form-inline justify-content-center">
+                    <div class="form-group mx-sm-3 mb-2">
+                      <input type="number" class="form-control" placeholder="px" onchange="pxTOrem(this.value);">
+                    </div>
+                </form>                
+                <hr class="my-5">
+                <button type="button" class="btn btn-info">
+                    <span id="result_px_rem"></span> <span class="badge badge-light">REM</span>
+                </button>
+            </div>
+            <div class="jumbotron col-xl-5 text-center mr-5">
+                <h1 class="display-4 mb-5">Convert rem to px</h1>
+                <form class="form-inline justify-content-center">
+                    <div class="form-group mx-sm-3 mb-2">
+                      <input type="number" class="form-control" placeholder="rem" onchange="remTOpx(this.value);">
+                    </div>
+                </form>                
+                <hr class="my-5">
+                <button type="button" class="btn btn-info">
+                    <span id="result_rem_px"></span> <span class="badge badge-light">PX</span>
+                </button>
+            </div>
+        </div>
+    </main>
+    <div class="container-fluid">
+        <div class="row justify-content-end m-5">
+            <a href="#top" class="top scroll"><i class="fas fa-angle-double-up text-light"></i></a>
+        </div>
+    </div>
+    <footer class="bg-dark text-center">
+        <div class="copyright py-3 text-light">&copy 2020 <a href="https://aurelie-rodriguesdutrey-codingandco.fr" class="">Aurelie Rodrigues Dutrey | Coding & Co</a></div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+    
+</body>
+</html>
